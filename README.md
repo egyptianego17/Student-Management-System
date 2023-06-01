@@ -44,7 +44,7 @@ The `Assignment` and `Feedback` classes in the `backend.functionality` package r
 Please note that the provided code is not complete and may require additional implementation to function properly. Make sure to review and test the code thoroughly before using it in a production environment.
 
 ## UML Diagram
-![UML Diagram]([https://example.com/images/openai_logo.png](https://github.com/egyptianego17/Student-Management-System/blob/main/UML.png?raw=true))
+![UML Diagram](https://github.com/egyptianego17/Student-Management-System/blob/main/UML.png?raw=true)
 
 Authored by:
 - Abdulrahman Omar
