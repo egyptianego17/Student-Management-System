@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="645.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.controllers.homepage.meetingsController">
+   <children>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #2262C6; -fx-background-radius: 0;" text="Meetings" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="Ebrima" size="25.0" />
+         </font>
+         <opaqueInsets>
+            <Insets left="15.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <AnchorPane layoutX="223.0" layoutY="175.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="615.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Button fx:id="btnaddnewmeeting" layoutX="421.0" layoutY="8.0" mnemonicParsing="false" onAction="#addassignments" prefHeight="30.0" prefWidth="180.0" style="-fx-background-radius: 15;" stylesheets="@../../css/colours.css" text="Add new Meeting" textFill="WHITE" />
+            <ScrollPane hbarPolicy="NEVER" layoutX="-1.0" layoutY="61.0" prefHeight="409.0" prefWidth="616.0" style="-fx-blend-mode: multiply; -fx-background-color: #F1FAEE;" styleClass="button" vbarPolicy="NEVER" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="55.0">
+               <content>
+                  <VBox fx:id="vbox" blendMode="SRC_ATOP" prefHeight="200.0" prefWidth="615.0" spacing="15.0">
+                     <padding>
+                        <Insets left="8.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="newassignment" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="645.0" style="-fx-background-color: #FFF;" visible="false">
+         <children>
+            <VBox layoutX="15.0" layoutY="231.0" prefHeight="200.0" prefWidth="615.0" spacing="5.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="65.0">
+               <children>
+                  <HBox prefHeight="52.0" prefWidth="616.0" spacing="10.0">
+                     <children>
+                        <Label layoutX="36.0" prefHeight="18.0" prefWidth="120.0" text="Topic: ">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txttopic" prefHeight="26.0" prefWidth="475.0" style="-fx-background-color: #2262C6;">
+                           <HBox.margin>
+                              <Insets top="6.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <VBox prefHeight="189.0" prefWidth="606.0">
+                     <children>
+                        <Label layoutX="36.0" prefHeight="18.0" prefWidth="150.0" text="Description:">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="txtdescription" prefHeight="134.0" prefWidth="606.0" promptText="Enter Assignment Description" style="-fx-background-color: #2262C6;" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" right="5.0" />
+                           </padding>
+                        </TextArea>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </VBox>
+                  <HBox prefHeight="35.0" prefWidth="616.0" spacing="10.0">
+                     <children>
+                        <Label layoutX="36.0" prefHeight="18.0" prefWidth="120.0" text="Teacher: ">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtteacher" editable="false" prefHeight="18.0" prefWidth="200.0" style="-fx-background-color: #2262C6;">
+                           <HBox.margin>
+                              <Insets top="1.0" />
+                           </HBox.margin>
+                        </TextField>
+                        <Label prefHeight="30.0" prefWidth="66.0" text="Type:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="75.0" top="-3.0" />
+                           </HBox.margin>
+                        </Label>
+                        <ComboBox fx:id="meetingtype" prefWidth="100.0" promptText="Type">
+                           <HBox.margin>
+                              <Insets left="-10.0" />
+                           </HBox.margin>
+                           <padding>
+                              <Insets right="1.0" />
+                           </padding>
+                        </ComboBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox prefHeight="35.0" prefWidth="616.0" spacing="10.0">
+                     <children>
+                        <Label layoutX="36.0" prefHeight="18.0" prefWidth="120.0" text="Deadline:">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <AnchorPane prefHeight="102.0" prefWidth="616.0">
+                     <children>
+                        <Button layoutX="431.0" layoutY="31.0" mnemonicParsing="false" onAction="#savemeeting" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 25;" stylesheets="@../../css/colours.css" text="Save &amp; Upload" textFill="WHITE" />
+                        <Button layoutX="34.0" layoutY="31.0" mnemonicParsing="false" onAction="#cancelmeeting" prefHeight="40.0" prefWidth="150.0" style="-fx-background-radius: 25;" stylesheets="@../../css/colours.css" text="Cancel" textFill="WHITE" />
+                        <DatePicker fx:id="txtdeadline" layoutX="142.0" layoutY="-32.0" onAction="#choosedate" />
+                        <Label fx:id="lblfile" layoutX="446.0" layoutY="-37.0" prefHeight="18.0" prefWidth="120.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets top="15.0" />
+               </padding>
+            </VBox>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #2262C6; -fx-background-radius: 0;" text="Add new Meeting" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Ebrima" size="25.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets left="15.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

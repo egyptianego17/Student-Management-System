@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="644.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="frontend.controllers.homepage.profileController">
+   <children>
+      <Label alignment="CENTER" layoutX="7.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="629.0" style="-fx-background-color: #2262C6;" text="Profile" textFill="WHITE" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="14.0">
+         <font>
+            <Font name="Ebrima" size="25.0" />
+         </font>
+         <opaqueInsets>
+            <Insets left="15.0" />
+         </opaqueInsets>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <AnchorPane layoutX="396.0" layoutY="269.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="345.0">
+         <children>
+            <Label layoutX="33.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="Your ID :">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtid" alignment="CENTER" blendMode="MULTIPLY" editable="false" layoutX="113.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-border-color: #2262C6; -fx-border-radius: 30;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="114.0" layoutY="450.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="415.0">
+         <children>
+            <AnchorPane layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="415.0">
+               <children>
+                  <Button fx:id="btnsave" layoutX="310.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveEdits" prefHeight="40.0" prefWidth="80.0" style="-fx-background-radius: 7;" stylesheets="@../../css/colours.css" text="Save" visible="false" />
+                  <Button fx:id="btncancel" layoutX="30.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancelEdits" prefHeight="40.0" prefWidth="80.0" style="-fx-background-radius: 7;" stylesheets="@../../css/colours.css" text="Cancel" visible="false" />
+                  <Button fx:id="btnedit" layoutX="148.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#profileEdit" prefHeight="40.0" prefWidth="120.0" style="-fx-background-radius: 7;" stylesheets="@../../css/colours.css" text="Edit" />
+               </children>
+               <padding>
+                  <Insets left="25.0" right="25.0" />
+               </padding>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="117.0" fitWidth="146.0" layoutX="18.0" layoutY="61.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/icons8_user_shield_128px_2.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtname" blendMode="MULTIPLY" editable="false" layoutX="152.0" layoutY="121.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="480.0" style="-fx-background-radius: 15; -fx-border-radius: 25; -fx-background-color: transparent;">
+         <font>
+            <Font size="3326.0" />
+         </font>
+      </TextField>
+      <Label layoutX="155.0" layoutY="63.0" prefHeight="62.0" prefWidth="98.0" text="Hello.">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="7.0" layoutY="269.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="86.0" prefWidth="415.0">
+         <children>
+            <Label layoutX="14.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="120.0" text="Your Email:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtemail" alignment="CENTER" blendMode="MULTIPLY" editable="false" layoutX="126.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="264.0" style="-fx-border-color: #2262C6; -fx-background-color: transparent; -fx-border-radius: 30;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <Label layoutX="24.0" layoutY="370.0" prefHeight="40.0" prefWidth="230.0" text="Your average score :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="398.0" prefHeight="62.0" prefWidth="454.0" text="The number of your tasks completed :">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="363.0" prefHeight="54.0" prefWidth="18.0" text="0" textFill="#2262c6">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="331.0" layoutY="402.0" prefHeight="54.0" prefWidth="18.0" text="0" textFill="#2262c6">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane fx:id="verifypane" layoutX="123.0" layoutY="98.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="353.0" prefWidth="415.0" style="-fx-background-color: #FFFFFFF;">
+         <children>
+            <Label layoutX="10.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="160.0" style="-fx-background-color: #A8DADC; -fx-background-radius: 0;" text="Verify your Identity" textFill="#1d3557" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+               <font>
+                  <Font name="Ebrima" size="25.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets left="15.0" />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </Label>
+            <AnchorPane prefHeight="150.0" prefWidth="415.0" style="-fx-background-color: WHITE;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="65.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="81.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="220.0" text="Enter Your Password :">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="txtconfirmpass" blendMode="MULTIPLY" layoutX="15.0" layoutY="117.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" style="-fx-border-radius: 10; -fx-background-color: transparent; -fx-border-color: #2262C6; -fx-background-radius: 10;" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" />
+                  <Button layoutX="241.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveverify" prefHeight="40.0" prefWidth="120.0" style="-fx-background-radius: 7; -fx-background-color: #2262C6;" text="Save" />
+                  <Button layoutX="44.0" layoutY="168.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#cancelverify" prefHeight="40.0" prefWidth="120.0" style="-fx-background-radius: 7; -fx-background-color: #2262C6;" text="Cancel" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
